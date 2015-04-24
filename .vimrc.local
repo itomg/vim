@@ -1,0 +1,30 @@
+" edit .vimrc.local quickly
+nnoremap <leader>ev :vsplit ~/.vimrc.local<CR>
+" load .vimrc quickly
+nnoremap <Leader>sv :source ~/.vimrc<CR>
+
+" change tab to 2 spaces
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
+
+" font and size
+:set guifont=Monaco:h15
+
+" use . as root dir
+let g:NERDTreeChDirMode=2
+nmap <C-\> :NERDTreeFind<CR>
+nmap <D-\> :NERDTreeToggle<CR>
+
+" let ctrlp use NERDTree's root dir
+let g:ctrlp_working_path_mode = 'rw'
+nmap <F6> :CtrlPClearCache<CR>
+
+" filename and full path
+nmap cp :let @+ = expand("%:t")<CR>
+nmap <C-S-c> :let @+ = expand("%:p")<CR>
+
+" switch buffer
+nmap <D-[> :bprev<Return>
+nmap <D-]> :bnext<Return>
