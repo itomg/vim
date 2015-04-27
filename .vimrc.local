@@ -1,5 +1,5 @@
 " edit .vimrc.local quickly
-nnoremap <leader>ev :vsplit ~/.vimrc.local<CR>
+nnoremap <leader>ev :ed ~/.vimrc.local<CR>
 " load .vimrc quickly
 nnoremap <Leader>sv :source ~/.vimrc<CR>
 
@@ -28,3 +28,7 @@ nmap <C-S-c> :let @+ = expand("%:p")<CR>
 " switch buffer
 nmap <D-[> :bprev<Return>
 nmap <D-]> :bnext<Return>
+nmap <Leader>w :bw<Return>
+
+" alias for CtrlSF
+nmap <C-S-f> <Plug>CtrlSFPrompt
